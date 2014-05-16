@@ -275,12 +275,13 @@ kimchi.enableBridgeOptions = function(enable) {
         $("#networkVlanID").prop("disabled", true);
         $("#networkVlanID").val("");
         $("#networkInterface").val("");
-        $("#bridge-options").slideUp(100);
+        $("#bridgeOptions").slideUp(100);
     } else if (!$("#networkInterface").val()){
         $("#networkInterface").prop("selectedIndex", 0);
-        $("#bridge-options").slideDown(100);
+        $("#bridgeOptions").slideDown(100);
     }
 };
+
 
 kimchi.setDefaultNetworkType = function(isInterfaceAvail) {
     $("#networkTypeBri").prop("checked", isInterfaceAvail);
@@ -289,7 +290,7 @@ kimchi.setDefaultNetworkType = function(isInterfaceAvail) {
     if (!isInterfaceAvail) {
         kimchi.enableBridgeOptions(false);
     } else {
-        $("#bridge-options").slideDown(100);
+        $("#bridgeOptions").slideDown(100);
     }
 };
 
@@ -318,7 +319,6 @@ kimchi.cleanNetworkDialog = function() {
     $("#networkVlanID").prop("disabled", true);
     $("#enableVlan").prop("checked", false);
 };
-
 kimchi.setupNetworkFormEvent = function() {
     $("#networkName").on("keyup", function(event) {
         $("#networkName").toggleClass("invalid-field", !$("#networkName").val().match(/^[a-zA-Z0-9_]+$/));

@@ -209,17 +209,28 @@
     vertical-align: top;
 }
 
-.network-config .destination {
-    margin-left: 28px;
+.bridge-option-column {
+    display: inline-block;
+    margin-left: 56px;
+    vertical-align: middle;
 }
 
-.network-config .VLAN {
-    margin-left: 28px;
+.bridge-option-column > div {
+    height: 25px;
+    line-height: 25px;
 }
 
-.network-config .VLAN input[type="text"] {
+.bridge-option-column select {
+    height: 26px;
+}
+
+.bridge-option-column input[type="text"] {
     height: 25px;
     width: 60px;
+}
+
+#labelNetworkVlanID {
+    margin-left: 26px;
 }
 
 .network-config .input-hint-icon {
